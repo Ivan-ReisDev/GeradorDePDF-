@@ -452,16 +452,15 @@ function GerarExtratoPDF() {
     }
 
 
-    doc.setFontSize(13)
-    doc.setFontType('bold')
+    doc.setFontSize(13);
+    doc.setFontType('bold');
     doc.text('Total:', 35, 153);
-    doc.text('R$ ' + calculoTotal(), 156, 153)
-    doc.text('R$ ' + resultadoCredito, 156, 54);
+    doc.text('R$ ' + calculoTotal(), 156, 153);
 
     doc.setLineWidth(0.4)
     doc.setDrawColor(209, 209, 209)
     doc.line(10, 40, 200, 40)
-    doc.line(10, 56, 200, 56);
+    doc.line(10, 52, 200, 52);
     doc.line(10, 148, 200, 148);
 
 
@@ -470,5 +469,5 @@ function GerarExtratoPDF() {
 
 }
 
-
+// =================== PAGINA DO EXTRATO ===================
 
