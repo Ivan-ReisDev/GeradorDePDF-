@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #e4e4e4;
+}
+
+.wrapper .sidebar{
+    background: #3a7ca1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(44, 112, 139);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #b9e5ff;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+    transition: .6s;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #256e99;
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #d6f0ff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background: #3a7ca1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #d6f0ff;
+}
+
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+form {
+    width: 530px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+        
+}
+
+input {
+    outline: none;
+    border: none;
+    width: 220px;
+    height: 23px;
+    background-color: transparent;
+    
+}
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #204c66;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+}
+
+.entrada,  
+select {
+    width: 260px;
+    border: 1px solid #3a7ca1;
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.entradas label {
+    text-align: center;
+    width: 100%;
+    
+}
+
+.iconeInput {
+    color: #3a7ca1;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+.entradas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+.botao {
+
+    border: 1px solid #3a7ca1 ;
+    width: 100px;
+    padding: 7px 4px;
+    height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3a7ca1;
+    border-radius: 10px;
+    transition: .6s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.botaolimpar {
+    border: none;
+    background-color: #256e99;
+    width: 100px;
+    padding: 7px 4px;
+    height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: .6s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.botao:hover,
+.botaolimpar:hover {
+    background-color: #204c66;
+    color: #FFFFFF;
+}
+
+.centro {
+    width: 550px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.507);
+}
+
+.footerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footerForm input, 
+.footerForm .entradas {
+    border-radius: 4px;
+    width: 100%;
+}
+.footerForm .entrada {
+    width: 300px;
+    padding-left: 10px;
+}
+
+.footerForm .iconeInput {
+    margin-right: 10px;
+}
+
+.btnCredito,
+.btnDebito {
+    border: none;
+    padding: 8px 10px 7px 10px;
+    font-size: 10px;
+    background-color: #256e99;
+    color: #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+#valorCredito,
+#valorDebito {
+    border: 1px solid #3a7ca1;
+    width: 80px;
+    margin: 25px 0 0 5px;
+    height: 30px;
+}
+
+.footerFormEntrada {
+    min-width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerFormEntrada:nth-child(1){
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    
+}
+
+.footerseparacao {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infocreditos, .infodebito {
+
+    width: 84%;
+    height: 80px;
+    display: block;
+    border: 1px solid #256e99;
+    border-radius: 5px;
+    overflow-y: scroll;
+    
+}
+
+ul {
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+li {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+

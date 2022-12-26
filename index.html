@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Gerador de Extrato</title>
+</head>
+
+<body class="active">
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://calculadora-de-boleto.vercel.app/">
+                        <span class="icon"><i class="fa-solid fa-calculator"></i></span>
+                        <span class="item">Calcule Aqui!</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-calculator"></i></span>
+                        <span class="item">Locador</span>
+
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="centro">
+            <form action="#" id="formulario">
+                <div class="entradas">
+                    <label for="locador">Proprietário</label>
+                    <div class="entrada">
+                        <input type="text" id="locador" placeholder="Nome do Locador">
+                        <i class="fa-solid fa-magnifying-glass iconeInput"></i>
+                    </div>
+                </div>
+                <div class="entradas">
+                    <label for="imovel">Imóvel</label>
+                    <div class="entrada">
+                        <input type="text" id="imovel" placeholder="Endereço do Imóvel">
+                        <i class="fa-solid fa-house iconeInput"></i>
+                    </div>
+                </div>
+
+                <div class="entradas">
+                    <label for="referencia">Referência</label>
+                    <select name="referencia" id="referencia">
+                        <option value="0">Selecione</option>
+                        <option value="Janeiro/2023">Janeiro/2023</option>
+                        <option value="Fevereiro/2023">Fevereiro/2023</option>
+                        <option value="Março/2023"> Março/2023</option>
+                        <option value="Abril/2023"> Abril/2023</option>
+                        <option value="Maio/2023"> Maio/2023</option>
+                        <option value="Junho/2023"> Junho/2023</option>
+                        <option value="Julho/2023"> Julho/2023</option>
+                        <option value="Agosto/2023"> Agosto/2023</option>
+                        <option value="Setembro/2023"> Setembro/2023</option>
+                        <option value="Outubro/2023"> Outubro/2023</option>
+                        <option value="Novembro/2023"> Novembro/2023</option>
+                        <option value="Dezembro/2023"> Dezembro/2023</option>
+                    </select>
+                </div>
+
+                <div class="entradas">
+                    <label for="pagamento">Metodo de Pagamento</label>
+                    <select name="pagamento" id="mtpagamento" required>
+                        <option value="Transferência">Transferência</option>
+                        <option value="Boleto">Boleto</option>
+                    </select>
+                </div>
+            </form>
+            <div class="footerForm">
+                <div class="info">
+                    <div class="entradas footerFormEntrada">
+                        <div class="footerseparacao">
+                            <label for="creditos">Créditos</label>
+                            <div class="entrada">
+                                <input type="text" id="creditos" placeholder="Informe o nome do Crédito">
+                                <i class="fa-solid fa-money-bill iconeInput"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" name="valorCredito" id="valorCredito">
+                            <button class="btnCredito"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="infocreditos">
+                            <ul class="adicionaCredito">
+                            </ul>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="entradas footerFormEntrada">
+                        <div class="footerseparacao">
+                            <label for="debito">Débitos</label>
+                            <div class="entrada">
+                                <input type="text" id="debito" placeholder="Informe o nome do Débito">
+                                <i class="fa-solid fa-money-bill iconeInput"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" name="valorDebito" id="valorDebito">
+                            <button class="btnDebito"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="infodebito">
+                        <ul class="adicionaDebito">
+                        </ul>
+                    </div>
+                    <div class="entradas EntradaComissao">
+                        <label for="comissao">Comissão</label>
+                        <div class="entrada">
+                            <input type="text" id="comissao" placeholder="Informe a Comissão">
+                            <i class="fa-solid fa-right-from-bracket iconeInput"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="botao">Gerar PDF</button>
+                <button class="botaolimpar">Limpar</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a838236c7b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
