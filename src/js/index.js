@@ -233,7 +233,8 @@ function calculoTotal() {
     SomarCreditoTotal()
     let resultado = resultadoCredito - (resultadoDebito + ConversorComissao());
     resultado.toFixed(2);
-    return resultado
+    var respostas = resultado.toLocaleString('pt-br', {minimumFractionDigits: 2});
+    return respostas
 }
 
 
